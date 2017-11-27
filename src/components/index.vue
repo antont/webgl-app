@@ -15,23 +15,24 @@
 </template>
 
 <style scoped>
+
 </style>
 
 <script>
-import ModelViewComponent from "./model-view.vue";
-import MapComponent from "./map.vue";
-import ControlComponent from "./control.vue";
+    import ModelViewComponent from "./model-view.vue";
+    import MapComponent from "./map.vue";
+    import ControlComponent from "./control.vue";
 
-export default {
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
-  components: {
-    ModelViewComponent: ModelViewComponent,
-    ControlComponent: ControlComponent,
-    MapComponent: MapComponent
-  }
-};
+    export default {
+        data() {
+            return {};
+        },
+        computed: {},
+        methods: {},
+        components: {
+            ModelViewComponent: ModelViewComponent,
+            ControlComponent: ControlComponent,
+            MapComponent: MapComponent
+        }
+    };
 </script>
