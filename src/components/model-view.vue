@@ -29,7 +29,7 @@
         0.1,
         1000
       );
-      camera.position.set(20, 20, 20);
+      camera.position.set(20, 20, 40);
 
       var renderer = new THREE.WebGLRenderer({
         canvas: canvasElement,
@@ -46,21 +46,28 @@
       scene.add(sun);
 
       var controls = new THREE.OrbitControls(camera, renderer.domElement);
-      // enable animation loop when using damping or autorotation
-      //controls.enableDamping = true;
-      //controls.dampingFactor = 0.25;
       controls.enableZoom = true;
 
-      // Loading glTF object
-      var loader = new THREE.GLTFLoader();
+      var host = "http://live3dmodelservice.ubicomp.oulu.fi/aika";
+      var url = "/oulu/api/city/address?street=Aleksanterinkatu";
+      Axios.get(host + url)
+        .then(function(response) {
+          console.log(response.data);
 
-      // Load a glTF resource
-      loader.load(
-        "http://localhost:8003/oulu/block6/building_1/Building1_2.gltf",
-        function(gltf) {
-          scene.add(gltf.scene);
-        }
-      );
+          // Loading glTF object
+          var loader = new THREE.GLTFLoader();
+          var doc = response.data.data[1];
+          // Load a glTF resource
+          loader.load(
+            host + doc.resources[1].url,
+            function(gltf) {
+              scene.add(gltf.scene);
+            }
+          );
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
 
       // Render scene
       function animate() {
