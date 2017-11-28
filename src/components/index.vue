@@ -24,15 +24,15 @@
     import ControlComponent from "./control.vue";
 
     export default {
-        data() {
-            return {};
-        },
-        computed: {},
-        methods: {},
-        components: {
-            ModelViewComponent: ModelViewComponent,
-            ControlComponent: ControlComponent,
-            MapComponent: MapComponent
-        }
+      data() {
+        return {};
+      },
+      computed: {},
+      methods: {},
+      components: {
+        ModelViewComponent: ModelViewComponent,
+        ControlComponent: ControlComponent,
+        MapComponent: MapComponent
+      }
     };
 </script>

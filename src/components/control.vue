@@ -9,12 +9,12 @@
 </style>
 
 <script>
-export default {
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
-  components: {}
-};
+  export default {
+    data() {
+      return {};
+    },
+    computed: {},
+    methods: {},
+    components: {}
+  };
 </script>

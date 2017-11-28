@@ -9,19 +9,19 @@
 </style>
 
 <script>
-  export default {
+    export default {
       data() {
-          return {};
+        return {};
       },
       mounted: function() {
-          var uluru = { lat: 65.011543, lng: 25.468772 };
-          var map = new google.maps.Map(document.getElementById("map"), {
-              zoom: 16,
-              center: uluru
-          });
+        var uluru = { lat: 65.011543, lng: 25.468772 };
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 16,
+          center: uluru
+        });
       },
       computed: {},
       methods: {},
       components: {}
-  };
+    };
 </script>

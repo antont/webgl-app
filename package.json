@@ -23,6 +23,7 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "three": "^0.87.1",
     "vue": "^2.5.8",
     "vue-loader": "^13.5.0",
