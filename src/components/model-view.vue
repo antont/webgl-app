@@ -54,6 +54,7 @@
         .then(function(response) {
           console.log(response.data);
 
+/* disabled while changed to load FBX cause server currently gives those
           // Loading glTF object
           var loader = new THREE.GLTFLoader();
           var doc = response.data.data[1];
@@ -63,6 +64,16 @@
             function(gltf) {
               scene.add(gltf.scene);
             }
+          );
+*/
+
+          // Loading FBX object (server currently seems to serve those)
+	  var loader = new THREE.FBXLoader();
+	  var doc = response.data.data[1];
+          loader.load(host + doc.resources[0].url,
+	    function( object ) {
+	      scene.add( object );
+	    }
           );
         })
         .catch(function(error) {
